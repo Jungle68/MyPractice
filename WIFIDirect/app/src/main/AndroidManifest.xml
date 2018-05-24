@@ -24,7 +24,6 @@
         <activity android:name="com.thc.www.p2p.android.main.MainActivity"/>
 
         <activity android:name="com.thc.www.p2p.android.login.LoginActivity"/>
-        <activity android:name="com.thc.www.p2p.android.home.apk.ApkFragment"/>
 
     </application>
 
