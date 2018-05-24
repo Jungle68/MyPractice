@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- clipChild被设置为true,需要在根布局和ViewPager中设为false. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_gallery_outer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <!-- clipChild被设置为true,需要在根布局和ViewPager中设为false. -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_gallery_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:clipChildren="false"
+        android:overScrollMode="never"/>
+</LinearLayout>

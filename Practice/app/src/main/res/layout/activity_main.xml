@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".android_21.share.FirstActivity"
+    tools:ignore="HardcodedText">
+
+    <Button
+        android:id="@+id/btn_android_21"
+        style="@style/BtnStyle"
+        android:text="Android 5.0"/>
+
+    <Button
+        android:id="@+id/btn_support"
+        style="@style/BtnStyle"
+        android:text="Support"
+        app:layout_constraintTop_toBottomOf="@id/btn_android_21"/>
+
+    <Button
+        android:id="@+id/btn_view_pager"
+        style="@style/BtnStyle"
+        android:text="ViewPager"
+        app:layout_constraintTop_toBottomOf="@id/btn_support"/>
+
+</android.support.constraint.ConstraintLayout>

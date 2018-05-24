@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/punch"
+        android:icon="@mipmap/ico_card_center"
+        android:title="@string/punch"
+        />
+
+    <item
+        android:id="@+id/my_task"
+        android:icon="@mipmap/ico_task_center"
+        android:title="@string/my_task"
+        />
+
+    <item
+        android:id="@+id/driving_record"
+        android:icon="@mipmap/ico_drive_center"
+        android:title="@string/driving_record"
+        />
+
+    <item
+        android:id="@+id/historical_order"
+        android:icon="@mipmap/ico_order_center"
+        android:title="@string/historical_order"
+        />
+
+    <item
+        android:id="@+id/view_colleague_pos"
+        android:icon="@mipmap/ico_location_center"
+        android:title="@string/view_colleague_pos"
+        />
+
+    <item
+        android:id="@+id/batch_scanning_pickup"
+        android:icon="@mipmap/ico_scan_center"
+        android:title="@string/batch_scanning_pickup"
+        />
+
+    <item
+        android:id="@+id/setting"
+        android:icon="@mipmap/ico_setting_center"
+        android:title="@string/setting"
+        />
+</menu>

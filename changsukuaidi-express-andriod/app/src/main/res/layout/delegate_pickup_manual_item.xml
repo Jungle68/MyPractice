@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/et_express_code"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_15dp"
+    android:background="@drawable/pickup_manual_et_bg"
+    android:hint="@string/pickup_manual_item_hint"
+    android:paddingBottom="@dimen/dimen_15dp"
+    android:paddingEnd="@dimen/dimen_15dp"
+    android:paddingStart="@dimen/dimen_15dp"
+    android:paddingTop="@dimen/dimen_15dp"
+    android:textColor="#666666"
+    android:textColorHint="#CCCCCC"
+    android:textSize="@dimen/dimen_15sp"/>

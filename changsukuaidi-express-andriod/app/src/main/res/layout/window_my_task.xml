@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/material_distribution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_15dp"
+            android:text="@string/material_distribution"
+            android:textColor="@color/common_text"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="#F2F2F2"/>
+
+        <TextView
+            android:id="@+id/drug_transit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_15dp"
+            android:text="@string/drug_transit"
+            android:textColor="@color/common_text"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="#F2F2F2"/>
+
+        <TextView
+            android:id="@+id/drug_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_15dp"
+            android:text="@string/drug_delivery"
+            android:textColor="@color/common_text"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_5dp"
+            android:background="#DDDDDD"/>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_15dp"
+            android:text="@string/cancel"
+            android:textColor="@color/common_text"/>
+    </LinearLayout>
+</layout>

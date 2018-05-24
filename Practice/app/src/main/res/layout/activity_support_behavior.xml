@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <Button
+        android:id="@+id/btn_translate"
+        style="@style/BtnStyle"
+        android:text="TranslateBehavior"/>
+
+    <Button
+        android:id="@+id/btn_scroll"
+        style="@style/BtnStyle"
+        android:text="ScrollBehavior"
+        app:layout_constraintTop_toBottomOf="@id/btn_translate"/>
+
+    <Button
+        android:id="@+id/btn_zhihu"
+        style="@style/BtnStyle"
+        android:text="知乎效果Behavior"
+        app:layout_constraintTop_toBottomOf="@id/btn_scroll"/>
+
+    <Button
+        android:id="@+id/btn_cover_header"
+        style="@style/BtnStyle"
+        android:text="覆盖头部 Behavior"
+        app:layout_constraintTop_toBottomOf="@id/btn_zhihu"/>
+
+</android.support.constraint.ConstraintLayout>

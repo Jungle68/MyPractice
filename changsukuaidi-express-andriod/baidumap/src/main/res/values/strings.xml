@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BaiduMap</string>
+    <string name="location_my">我的位置</string>
+    <string name="query_trace">查询轨迹</string>
+</resources>

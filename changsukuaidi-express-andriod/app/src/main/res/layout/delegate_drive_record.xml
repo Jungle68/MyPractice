@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tv_record_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ico_time_center"
+        android:drawablePadding="@dimen/dimen_7dp"
+        android:paddingEnd="@dimen/dimen_15dp"
+        android:paddingStart="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_15dp"
+        android:textColor="#999999"
+        android:textSize="@dimen/dimen_12sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2017-12-30"/>
+
+    <TextView
+        android:id="@+id/tv_mileage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dimen_15dp"
+        android:paddingStart="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_12dp"
+        android:text="@string/mileage"
+        android:textColor="#333333"
+        android:textSize="@dimen/dimen_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_record_date"/>
+
+    <TextView
+        android:id="@+id/tv_mileage_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dimen_15dp"
+        android:paddingStart="@dimen/dimen_16dp"
+        android:paddingTop="@dimen/dimen_12dp"
+        android:textColor="#333333"
+        android:textSize="@dimen/dimen_15sp"
+        app:layout_constraintStart_toEndOf="@id/tv_mileage"
+        app:layout_constraintTop_toBottomOf="@id/tv_record_date"
+        tools:text="300KM"/>
+
+    <TextView
+        android:id="@+id/tv_oil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dimen_15dp"
+        android:paddingStart="@dimen/dimen_35dp"
+        android:paddingTop="@dimen/dimen_12dp"
+        android:text="@string/oil_cost"
+        android:textColor="#333333"
+        android:textSize="@dimen/dimen_15sp"
+        app:layout_constraintStart_toEndOf="@id/tv_mileage_value"
+        app:layout_constraintTop_toBottomOf="@id/tv_record_date"/>
+
+    <TextView
+        android:id="@+id/tv_oil_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@mipmap/ico_more_center"
+        android:paddingBottom="@dimen/dimen_15dp"
+        android:paddingEnd="@dimen/dimen_15dp"
+        android:paddingStart="@dimen/dimen_16dp"
+        android:paddingTop="@dimen/dimen_12dp"
+        android:textColor="#333333"
+        android:textSize="@dimen/dimen_15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_oil"
+        app:layout_constraintTop_toBottomOf="@id/tv_record_date"
+        tools:text="300升"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_10dp"
+        android:background="#F2F2F2"
+        app:layout_constraintTop_toBottomOf="@id/tv_mileage"/>
+</android.support.constraint.ConstraintLayout>

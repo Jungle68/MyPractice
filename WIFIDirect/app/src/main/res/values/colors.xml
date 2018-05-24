@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#72A27C</color>
+    <color name="colorPrimaryDark">#72A27C</color>
+    <color name="colorAccent">#72A27C</color>
+
+    <color name="colorTheme">#72A27C</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGray">#777777</color>
+
+    <color name="colorHomePageAppRecyclerBg">#EEEEEE</color>
+</resources>

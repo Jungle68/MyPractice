@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <Button
+        android:id="@+id/btn_gallery_2d"
+        style="@style/BtnStyle"
+        android:text="Gallery 2d"/>
+
+    <Button
+        android:id="@+id/btn_gallery_3d"
+        style="@style/BtnStyle"
+        android:text="Gallery 3d"
+        app:layout_constraintTop_toBottomOf="@id/btn_gallery_2d"/>
+
+    <Button
+        android:id="@+id/btn_gallery_rotation"
+        style="@style/BtnStyle"
+        android:text="Gallery Rotation"
+        app:layout_constraintTop_toBottomOf="@id/btn_gallery_3d"/>
+
+</android.support.constraint.ConstraintLayout>

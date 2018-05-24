@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="margin_small">15dp</dimen>
+
+    <!--首页 menu 中 icon 与 text 之间的距离-->
+    <dimen name="design_navigation_icon_padding" tools:override="true">12dp</dimen>
+    <!--首页 menu 与 header 之间的间距-->
+    <dimen name="design_navigation_separator_vertical_padding" tools:override="true">0dp</dimen>
+    <!-- 首页侧滑item的Icon的大小 -->
+    <dimen name="design_navigation_icon_size" tools:override="true">16dp</dimen>
+    <!-- 首页侧滑item距左侧的距离 -->
+    <dimen name="abc_list_item_padding_horizontal_material" tools:override="true">25dp</dimen>
+
+</resources>

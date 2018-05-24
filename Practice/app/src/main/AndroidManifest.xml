@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.thc.www.practice">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.thc.www.practice.android_21.share.SecondActivity"/>
+        <activity android:name="com.thc.www.practice.android_21.share.FirstActivity"/>
+        <activity android:name="com.thc.www.practice.android_21.transition.PlaceHolderActivity"/>
+        <activity android:name=".support.sliding_pane_layout.SlidingPaneLayoutActivity"/>
+        <activity android:name=".android_21.Android21Activity"/>
+        <activity android:name=".support.SupportActivity"/>
+        <activity android:name=".android_21.sample.login.LoginActivity"/>
+        <activity
+            android:name=".android_21.sample.login.RegisterActivity"
+            android:theme="@style/Translucent"/>
+        <activity android:name=".android_21.sample.login.LoginSuccessActivity"/>
+        <activity android:name=".support.behavior.TranslateBehaviorActivity"/>
+        <activity android:name=".support.behavior.ScrollBehaviorActivity"/>
+        <activity android:name=".support.behavior.BehaviorActivity"/>
+        <activity android:name=".support.behavior.CoverHeaderScrollBehaviorActivity"/>
+        <activity android:name=".support.behavior.ZhihuBehaviorActivity"/>
+        <activity android:name=".support.bottom_sheet_dialog.BottomSheetActivity"/>
+        <activity android:name=".support.recyclerview.CustomerLayoutManagerActivity"/>
+        <activity android:name=".support.recyclerview.RecyclerViewActivity"/>
+        <activity android:name=".viewpager.ViewPagerActivity"/>
+        <activity android:name=".viewpager.gallery_2d.Gallery2dActivity"/>
+        <activity android:name=".viewpager.gallery_3d.Gallery3dActivity"/>
+        <activity android:name=".viewpager.rotation.GalleryRotationActivity"/>
+    </application>
+
+</manifest>

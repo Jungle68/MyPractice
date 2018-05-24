@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".android_21.share.FirstActivity"
+    tools:ignore="HardcodedText">
+
+    <Button
+        android:id="@+id/btn_share"
+        style="@style/BtnStyle"
+        android:text="共享元素 &amp; ViewAnimationUtils"/>
+
+    <Button
+        android:id="@+id/btn_transition_place_holder"
+        style="@style/BtnStyle"
+        android:text="Transition &amp; PlaceHolder"
+        app:layout_constraintTop_toBottomOf="@id/btn_share"/>
+
+    <Button
+        android:id="@+id/btn_sample_login"
+        style="@style/BtnStyle"
+        android:text="登录界面"
+        app:layout_constraintTop_toBottomOf="@id/btn_transition_place_holder"/>
+
+</android.support.constraint.ConstraintLayout>

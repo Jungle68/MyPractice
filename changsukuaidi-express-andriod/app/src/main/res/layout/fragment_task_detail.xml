@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_task_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/pic_cancel_details"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/iv_task_status"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_task_status">
+
+                <TextView
+                    android:id="@+id/tv_task_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:textColor="@color/common_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="已取消"/>
+
+                <TextView
+                    android:id="@+id/tv_is_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@drawable/prior_round_rect"
+                    android:paddingBottom="1dp"
+                    android:paddingEnd="6dp"
+                    android:paddingStart="6dp"
+                    android:paddingTop="1dp"
+                    android:text="@string/first"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_task_status"
+                    app:layout_constraintStart_toEndOf="@id/tv_task_status"
+                    app:layout_constraintTop_toTopOf="@id/tv_task_status"/>
+
+                <TextView
+                    android:id="@+id/tv_status_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="加急送达时间：2017-12-06  15:00"
+                    android:textColor="#E94029"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_task_status"
+                    tools:ignore="HardcodedText"/>
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/space"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_10dp"
+                android:background="@color/space_color"
+                app:layout_constraintTop_toBottomOf="@id/iv_task_status"/>
+
+            <TextView
+                android:id="@+id/task_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:lineSpacingExtra="10dp"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingTop="@dimen/margin_small"
+                android:textColor="@color/common_text_grey_9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/space"
+                tools:text="任务编号:  CXTXJSHJASHAJSHJA \n快递单号:  CX312893718293918123\n下单时间:  2017-08-24 13:24:45"/>
+
+            <View
+                android:id="@+id/space2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_10dp"
+                android:background="@color/space_color"
+                app:layout_constraintTop_toBottomOf="@id/task_num"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/route"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/space2"
+                tools:visibility="gone"/>
+
+            <View
+                android:id="@+id/space3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_10dp"
+                android:background="@color/space_color"
+                app:layout_constraintTop_toBottomOf="@id/route"
+                tools:visibility="gone"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tripartite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/space3">
+
+                <TextView
+                    android:id="@+id/tripartite_dispatch_info_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/tripartite_dispatch_info"
+                    android:textColor="@color/common_text"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <View
+                    android:id="@+id/tripartite_space"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@color/divider_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tripartite_dispatch_info_label"/>
+
+                <View
+                    android:id="@+id/tripartite_divider"
+                    style="@style/DividerStyle"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tripartite_space"/>
+
+                <TextView
+                    android:id="@+id/express_brand_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:includeFontPadding="false"
+                    android:text="@string/express_brand"
+                    android:textColor="@color/common_text"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tripartite_dispatch_note_label"
+                    app:layout_constraintStart_toStartOf="@+id/tripartite_dispatch_note_label"
+                    app:layout_constraintTop_toBottomOf="@id/tripartite_divider"/>
+
+                <TextView
+                    android:id="@+id/express_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="43dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/common_text"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/express_brand_label"
+                    app:layout_constraintTop_toTopOf="@id/express_brand_label"
+                    tools:text="顺丰"/>
+
+                <View
+                    android:id="@+id/tripartite_divider2"
+                    style="@style/DividerStyle"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/express_brand"/>
+
+                <TextView
+                    android:id="@+id/express_num_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:includeFontPadding="false"
+                    android:text="@string/express_num"
+                    android:textColor="@color/common_text"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tripartite_dispatch_note_label"
+                    app:layout_constraintStart_toStartOf="@+id/tripartite_dispatch_note_label"
+                    app:layout_constraintTop_toBottomOf="@id/tripartite_divider2"/>
+
+                <TextView
+                    android:id="@+id/express_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="43dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/common_text"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/express_num_label"
+                    app:layout_constraintTop_toTopOf="@id/express_num_label"
+                    tools:text="989898989898989"/>
+
+                <View
+                    android:id="@+id/tripartite_divider3"
+                    style="@style/DividerStyle"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/express_num"/>
+
+                <TextView
+                    android:id="@+id/tripartite_dispatch_note_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/tripartite_dispatch_note"
+                    android:textColor="@color/common_text"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tripartite_divider3"/>
+
+                <TextView
+                    android:id="@+id/tripartite_dispatch_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginStart="43dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="5dp"
+                    android:textColor="@color/common_text"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/tripartite_dispatch_note_label"
+                    app:layout_constraintTop_toBottomOf="@id/tripartite_divider3"
+                    tools:text="由于车辆损坏, 无法继续配送\n特转交顺丰配送"/>
+
+                <View
+                    android:id="@+id/tripartite_divider4"
+                    style="@style/DividerStyle"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tripartite_dispatch_note"/>
+
+                <TextView
+                    android:id="@+id/order_certificate_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/order_certificate"
+                    android:textColor="@color/common_text"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tripartite_divider4"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/order_certificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/order_certificate_label"
+                    tools:visibility="gone"/>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/receipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/order_certificate">
+
+                    <View
+                        android:id="@+id/receipt_space"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_10dp"
+                        android:background="@color/space_color"/>
+
+                    <TextView
+                        android:id="@+id/receipt_certificate_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:text="@string/receipt_certificate"
+                        android:textColor="@color/common_text"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/receipt_space"/>
+
+                    <TextView
+                        android:id="@+id/receipt_certificate_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="72dp"
+                        android:textColor="@color/common_text"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/receipt_certificate_label"
+                        app:layout_constraintStart_toEndOf="@id/receipt_certificate_label"
+                        app:layout_constraintTop_toTopOf="@id/receipt_certificate_label"
+                        tools:text="2017-12-07 15:09:08"/>
+
+                    <ImageView
+                        android:id="@+id/receipt_certificate_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:padding="6dp"
+                        android:src="@mipmap/ico_compile_details"
+                        app:layout_constraintBottom_toBottomOf="@id/receipt_certificate_label"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/receipt_certificate_label"/>
+
+                    <View
+                        android:id="@+id/receipt_divider"
+                        style="@style/DividerStyle"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        app:layout_constraintTop_toBottomOf="@id/receipt_certificate_label"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/receipt_certificate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/receipt_divider"
+                        tools:visibility="gone"/>
+                </android.support.constraint.ConstraintLayout>
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/space4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_10dp"
+                android:background="@color/space_color"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/tripartite"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_package_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_small"
+                app:layout_constraintTop_toBottomOf="@id/space4"
+                tools:visibility="gone">
+
+                <TextView
+                    android:id="@+id/package_detail_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:drawableEnd="@mipmap/ico_drop_details"
+                    android:text="@string/package_detail"
+                    android:textColor="@color/common_text"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <View
+                    android:id="@+id/package_space"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@color/divider_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/package_detail_label"/>
+
+                <View
+                    android:id="@+id/package_divider"
+                    style="@style/DividerStyle"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/package_space"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/package_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    app:layout_constraintTop_toBottomOf="@id/package_divider"
+                    tools:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/package_note_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/note"
+                    android:textColor="@color/common_text_grey"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/deadline_delivery_label"
+                    app:layout_constraintStart_toStartOf="@+id/deadline_delivery_label"
+                    app:layout_constraintTop_toBottomOf="@id/package_detail"/>
+
+                <TextView
+                    android:id="@+id/package_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="43dp"
+                    app:layout_constraintStart_toEndOf="@id/package_note_label"
+                    app:layout_constraintTop_toTopOf="@id/package_note_label"
+                    tools:text="请尽快将物料送达我处, \n数据数据"/>
+
+                <View
+                    android:id="@+id/package_divider2"
+                    style="@style/DividerStyle"
+                    android:layout_marginTop="@dimen/margin_small"
+                    app:layout_constraintTop_toBottomOf="@id/package_note"/>
+
+                <TextView
+                    android:id="@+id/deadline_delivery_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/deadline_delivery"
+                    android:textColor="@color/common_text_grey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/package_divider2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="43dp"
+                    app:layout_constraintBottom_toBottomOf="@id/deadline_delivery_label"
+                    app:layout_constraintStart_toEndOf="@id/deadline_delivery_label"
+                    app:layout_constraintTop_toTopOf="@id/deadline_delivery_label"
+                    tools:text="2017-12-06 15:09:08"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/space5"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/space_color"
+                app:layout_constraintTop_toBottomOf="@id/cl_package_detail"
+                tools:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/transfer_center_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/transfer_center_phone"
+                android:textColor="@color/common_text_grey"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/space5"
+                tools:text="调拨中心电话:  02888888888"/>
+
+            <TextView
+                android:id="@+id/service_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textColor="@color/common_text_grey"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@id/transfer_center_phone"
+                app:layout_constraintTop_toBottomOf="@id/transfer_center_phone"
+                tools:text="服务电话:  028888888888"/>
+
+            <TextView
+                android:id="@+id/contact_to_transfer_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:background="@drawable/contact_transfer_center_bg"
+                android:paddingBottom="8dp"
+                android:paddingEnd="@dimen/margin_small"
+                android:paddingStart="@dimen/margin_small"
+                android:paddingTop="8dp"
+                android:text="@string/contact_to_transfer_center"
+                android:textColor="@color/common_text_grey"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@id/service_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/transfer_center_phone"/>
+
+            <View
+                android:id="@+id/space6"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@color/space_color"
+                app:layout_constraintTop_toBottomOf="@id/service_phone"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/space6">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/view_end"
+                    style="@style/task_type_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/view_end"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/scan_piece"
+                    style="@style/task_type_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/scan_piece"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/manual_piece"
+                    style="@style/task_type_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/manual_piece"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/confirm_delivery"
+                    style="@style/task_type_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/confirm_delivery"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/confirm_receipt"
+                    style="@style/task_type_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/confirm_receipt"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/second_dispatch"
+                    style="@style/task_type_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/second_dispatch"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tripartite_dispatch"
+                    style="@style/task_type_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/tripartite_dispatch"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/return_transfer_center"
+                    style="@style/task_type_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/return_transfer_center"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/receipt_update"
+                    style="@style/task_type_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/receipt_update"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</layout>

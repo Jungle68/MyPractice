@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/dependence_one"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence10"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence11"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence12"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence13"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence14"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence15"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence16"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence17"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence18"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/dependence_two"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence20"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence21"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence22"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence23"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence25"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence26"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence27"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:text="dependence28"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        app:layout_behavior="com.thc.www.practice.support.behavior.ScrollBehavior">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorPrimary"
+                android:padding="15dp"
+                android:text="child0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorPrimary"
+                android:padding="15dp"
+                android:text="child1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorPrimary"
+                android:padding="15dp"
+                android:text="child2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorPrimary"
+                android:padding="15dp"
+                android:text="child3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorPrimary"
+                android:padding="15dp"
+                android:text="child4"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorPrimary"
+                android:padding="15dp"
+                android:text="child5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorPrimary"
+                android:padding="15dp"
+                android:text="child6"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorPrimary"
+                android:padding="15dp"
+                android:text="child7"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorPrimary"
+                android:padding="15dp"
+                android:text="child8"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
