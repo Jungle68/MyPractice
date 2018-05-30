@@ -52,6 +52,7 @@ class SkidRightLayoutManagerActivity : AppCompatActivity() {
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             Glide.with(this@SkidRightLayoutManagerActivity)
+                    .asGif()
                     .load(imgs[position % 7])
                     .apply(RequestOptions().diskCacheStrategy(DiskCacheStrategy.RESOURCE))
                     .into(holder.imgBg)

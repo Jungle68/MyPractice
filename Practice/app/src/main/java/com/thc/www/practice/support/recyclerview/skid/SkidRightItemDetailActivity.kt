@@ -36,6 +36,7 @@ class SkidRightItemDetailActivity : AppCompatActivity() {
                     .into(img_bg)
             Handler().postDelayed({
                 Glide.with(this@SkidRightItemDetailActivity)
+                        .asGif()
                         .load(mImgPath)
                         .apply(RequestOptions().diskCacheStrategy(DiskCacheStrategy.RESOURCE))
                         .into(img_gif)
