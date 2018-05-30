@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,4 +13,27 @@
         style="@style/BtnStyle"
         android:text="Customer LinearLayoutManger"/>
 
+    <Button
+        android:id="@+id/btn_echeion_layout_manager"
+        style="@style/BtnStyle"
+        android:text="EcheIon LayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/btn_customer_layout_manager_linear"/>
+
+    <Button
+        android:id="@+id/btn_picker_layout_manager"
+        style="@style/BtnStyle"
+        android:text="Picker LayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/btn_echeion_layout_manager"/>
+
+    <Button
+        android:id="@+id/btn_slide_layout_manager"
+        style="@style/BtnStyle"
+        android:text="Slide LayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/btn_picker_layout_manager"/>
+
+    <Button
+        android:id="@+id/btn_skid_layout_manager"
+        style="@style/BtnStyle"
+        android:text="Skid LayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/btn_slide_layout_manager"/>
 </android.support.constraint.ConstraintLayout>

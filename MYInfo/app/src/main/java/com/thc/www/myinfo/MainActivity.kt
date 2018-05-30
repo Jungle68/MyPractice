@@ -17,22 +17,15 @@ class MainActivity : MyBaseActivity() {
         r = Math.sqrt((screenW * screenW + screenH * screenH) * 1.0).toInt() + 10
     }
 
-    override fun onWindowFocusChanged(hasFocus: Boolean) {
-        super.onWindowFocusChanged(hasFocus)
-        addAnimations()
-    }
-
-    private fun addAnimations() {
-        if (animationAdded) return
-        animationAdded = true
-
+    override fun addAnimations() {
+        super.addAnimations()
         addCircleAnimation()
         wowo.ready()
     }
 
     private fun addCircleAnimation() {
         wowo.addAnimation(circle)
-                .add(WoWoShapeColorAnimation.builder().page(0)
+                .add(WoWoShapeColorAnimation.builder().page(0).start(0.3)
                         .from(color(R.color.gray)).to(color(R.color.light_blue)).build())
                 .add(WoWoScaleAnimation.builder().page(0)
                         .fromXY(1f).toX((r * 2 / circle.width).toFloat()).toY((r * 2 / circle.height).toFloat())

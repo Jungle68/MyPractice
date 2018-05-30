@@ -1,4 +1,4 @@
-package com.thc.www.practice.android_21.sample.login
+package com.thc.www.practice.sample.login
 
 import android.app.ActivityOptions
 import android.content.Intent

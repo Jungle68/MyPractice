@@ -22,23 +22,30 @@
         <activity android:name=".support.sliding_pane_layout.SlidingPaneLayoutActivity"/>
         <activity android:name=".android_21.Android21Activity"/>
         <activity android:name=".support.SupportActivity"/>
-        <activity android:name=".android_21.sample.login.LoginActivity"/>
+        <activity android:name="com.thc.www.practice.sample.login.LoginActivity"/>
         <activity
-            android:name=".android_21.sample.login.RegisterActivity"
+            android:name="com.thc.www.practice.sample.login.RegisterActivity"
             android:theme="@style/Translucent"/>
-        <activity android:name=".android_21.sample.login.LoginSuccessActivity"/>
+        <activity android:name="com.thc.www.practice.sample.login.LoginSuccessActivity"/>
         <activity android:name=".support.behavior.TranslateBehaviorActivity"/>
         <activity android:name=".support.behavior.ScrollBehaviorActivity"/>
         <activity android:name=".support.behavior.BehaviorActivity"/>
         <activity android:name=".support.behavior.CoverHeaderScrollBehaviorActivity"/>
         <activity android:name=".support.behavior.ZhihuBehaviorActivity"/>
         <activity android:name=".support.bottom_sheet_dialog.BottomSheetActivity"/>
-        <activity android:name=".support.recyclerview.CustomerLayoutManagerActivity"/>
+        <activity android:name=".support.recyclerview.linearlayout.CustomerLayoutManagerActivity"/>
         <activity android:name=".support.recyclerview.RecyclerViewActivity"/>
         <activity android:name=".viewpager.ViewPagerActivity"/>
         <activity android:name=".viewpager.gallery_2d.Gallery2dActivity"/>
         <activity android:name=".viewpager.gallery_3d.Gallery3dActivity"/>
         <activity android:name=".viewpager.rotation.GalleryRotationActivity"/>
+        <activity android:name=".sample.SampleActivity"/>
+        <activity android:name=".sample.loading.LeafLoadingActivity"/>
+        <activity android:name=".support.recyclerview.vertical_scroll.EcheIonLayoutManagerActivity"/>
+        <activity android:name=".support.recyclerview.picker.PickerLayoutManagerActivity"/>
+        <activity android:name=".support.recyclerview.slide.SlideLayoutManagerActivity"/>
+        <activity android:name=".support.recyclerview.skid.SkidRightLayoutManagerActivity"/>
+        <activity android:name=".support.recyclerview.skid.SkidRightItemDetailActivity"/>
     </application>
 
 </manifest>

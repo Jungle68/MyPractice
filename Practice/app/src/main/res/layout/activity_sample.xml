@@ -9,14 +9,13 @@
     tools:ignore="HardcodedText">
 
     <Button
-        android:id="@+id/btn_share"
+        android:id="@+id/btn_login_page"
         style="@style/BtnStyle"
-        android:text="共享元素 &amp; ViewAnimationUtils"/>
+        android:text="Login page"/>
 
     <Button
-        android:id="@+id/btn_transition_place_holder"
+        android:id="@+id/btn_leaf_loading"
         style="@style/BtnStyle"
-        android:text="Transition &amp; PlaceHolder"
-        app:layout_constraintTop_toBottomOf="@id/btn_share"/>
-
+        android:text="Leaf Loading"
+        app:layout_constraintTop_toBottomOf="@id/btn_login_page"/>
 </android.support.constraint.ConstraintLayout>

@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.thc.www.practice.R
-import com.thc.www.practice.android_21.sample.login.LoginActivity
+import com.thc.www.practice.sample.login.LoginActivity
 import com.thc.www.practice.android_21.share.FirstActivity
 import com.thc.www.practice.android_21.transition.PlaceHolderActivity
 import kotlinx.android.synthetic.main.activity_andorid_21.*
@@ -24,9 +24,6 @@ class Android21Activity : AppCompatActivity() {
         }
         btn_transition_place_holder.setOnClickListener {
             startActivity(Intent(this@Android21Activity, PlaceHolderActivity::class.java))
-        }
-        btn_sample_login.setOnClickListener {
-            startActivity(Intent(this@Android21Activity, LoginActivity::class.java))
         }
     }
 }

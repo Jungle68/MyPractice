@@ -1,4 +1,4 @@
-package com.thc.www.practice.support.recyclerview
+package com.thc.www.practice.support.recyclerview.linearlayout
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
