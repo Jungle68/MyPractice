@@ -18,4 +18,10 @@
         style="@style/BtnStyle"
         android:text="Leaf Loading"
         app:layout_constraintTop_toBottomOf="@id/btn_login_page"/>
+
+    <Button
+        android:id="@+id/btn_douyin"
+        style="@style/BtnStyle"
+        android:text="Dou Yin"
+        app:layout_constraintTop_toBottomOf="@id/btn_leaf_loading"/>
 </android.support.constraint.ConstraintLayout>

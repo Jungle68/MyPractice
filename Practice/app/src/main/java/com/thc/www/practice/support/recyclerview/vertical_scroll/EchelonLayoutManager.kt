@@ -39,7 +39,6 @@ class EchelonLayoutManager : RecyclerView.LayoutManager() {
         return mScrollOffset - pendingScrollOffset + dy
     }
 
-
     override fun canScrollVertically() = true
 
     private fun layoutChild(recycler: RecyclerView.Recycler) {

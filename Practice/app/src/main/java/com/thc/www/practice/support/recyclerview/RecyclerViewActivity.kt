@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.thc.www.practice.R
+import com.thc.www.practice.support.recyclerview.banner.BannerLayoutManagerActivity
 import com.thc.www.practice.support.recyclerview.linearlayout.CustomerLayoutManagerActivity
 import com.thc.www.practice.support.recyclerview.picker.PickerLayoutManagerActivity
 import com.thc.www.practice.support.recyclerview.skid.SkidRightLayoutManagerActivity
@@ -35,6 +36,9 @@ class RecyclerViewActivity : AppCompatActivity() {
         }
         btn_skid_layout_manager.setOnClickListener {
             startActivity(Intent(this@RecyclerViewActivity, SkidRightLayoutManagerActivity::class.java))
+        }
+        btn_banner_layout_manager.setOnClickListener {
+            startActivity(Intent(this@RecyclerViewActivity, BannerLayoutManagerActivity::class.java))
         }
     }
 }

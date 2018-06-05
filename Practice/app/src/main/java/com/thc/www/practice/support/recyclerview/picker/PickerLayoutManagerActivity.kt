@@ -61,7 +61,6 @@ class PickerLayoutManagerActivity : AppCompatActivity() {
                                 if (textView != null)
                                     tv_hour.text = textView.text
                             }
-
                         })
                     }
             adapter = MyAdapter(mHours)

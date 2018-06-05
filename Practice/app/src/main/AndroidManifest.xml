@@ -46,6 +46,9 @@
         <activity android:name=".support.recyclerview.slide.SlideLayoutManagerActivity"/>
         <activity android:name=".support.recyclerview.skid.SkidRightLayoutManagerActivity"/>
         <activity android:name=".support.recyclerview.skid.SkidRightItemDetailActivity"/>
+        <activity android:name=".sample.douyin.DouYinActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".support.recyclerview.banner.BannerLayoutManagerActivity"/>
     </application>
 
 </manifest>

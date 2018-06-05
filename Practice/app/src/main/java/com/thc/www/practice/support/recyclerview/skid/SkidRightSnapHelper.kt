@@ -58,6 +58,10 @@ class SkidRightSnapHelper : SnapHelper() {
         return RecyclerView.NO_POSITION
     }
 
+    override fun attachToRecyclerView(recyclerView: RecyclerView?) {
+        super.attachToRecyclerView(recyclerView)
+    }
+
     override fun findSnapView(layoutManager: RecyclerView.LayoutManager): View? {
         if (layoutManager is SkidRightLayoutManager) {
             val pos = layoutManager.getFixedScrollPosition(

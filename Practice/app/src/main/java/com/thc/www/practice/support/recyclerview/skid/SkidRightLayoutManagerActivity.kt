@@ -6,7 +6,6 @@ import android.support.v4.app.ActivityOptionsCompat
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.RecyclerView
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +16,6 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.thc.www.practice.R
-import com.thc.www.practice.utils.DisplayUtil
 import kotlinx.android.synthetic.main.single_recycler_view.*
 
 /**
@@ -40,6 +38,7 @@ class SkidRightLayoutManagerActivity : AppCompatActivity() {
 
     /**
      * 适配器
+     *
      */
     internal inner class MyAdapter : RecyclerView.Adapter<ViewHolder>() {
         private val imgs = intArrayOf(R.mipmap.skid_right_1, R.mipmap.skid_right_2, R.mipmap.skid_right_3, R.mipmap.skid_right_4, R.mipmap.skid_right_5, R.mipmap.skid_right_6, R.mipmap.skid_right_7)

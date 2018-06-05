@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.thc.www.practice.R
+import com.thc.www.practice.sample.douyin.DouYinActivity
 import com.thc.www.practice.sample.loading.LeafLoadingActivity
 import com.thc.www.practice.sample.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_sample.*
@@ -24,6 +25,10 @@ class SampleActivity : AppCompatActivity() {
 
         btn_leaf_loading.setOnClickListener {
             startActivity(Intent(this@SampleActivity, LeafLoadingActivity::class.java))
+        }
+
+        btn_douyin.setOnClickListener {
+            startActivity(Intent(this@SampleActivity, DouYinActivity::class.java))
         }
     }
 }

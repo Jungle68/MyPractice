@@ -36,4 +36,10 @@
         style="@style/BtnStyle"
         android:text="Skid LayoutManager"
         app:layout_constraintTop_toBottomOf="@id/btn_slide_layout_manager"/>
+
+    <Button
+        android:id="@+id/btn_banner_layout_manager"
+        style="@style/BtnStyle"
+        android:text="Banner LayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/btn_skid_layout_manager"/>
 </android.support.constraint.ConstraintLayout>

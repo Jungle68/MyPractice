@@ -28,6 +28,6 @@
     <Button
         android:id="@+id/btn_sample"
         style="@style/BtnStyle"
-        android:text="Sample(2)"
+        android:text="Sample(3)"
         app:layout_constraintTop_toBottomOf="@id/btn_view_pager"/>
 </android.support.constraint.ConstraintLayout>
