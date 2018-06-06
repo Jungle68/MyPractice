@@ -1,0 +1,56 @@
+override fun getAliPayStr(channel: String, amount: Double) {
+        if (mRootView.money != mRootView.money.toInt().toDouble() && mRootView.useInputMonye()) {
+            mRootView.initmRechargeInstructionsPop()
+            return
+        }
+        mBillRepository.getIntegrationAliPayStr(channel, amount)
+                .doAfterTerminate { mRootView.configSureBtn(true) }
+
+                .doOnSubscribe {
+                    mRootView.configSureBtn(false)
+                    mRootView.showSnackLoadingMessage(mContext.getString(R.string.recharge_credentials_ing))
+                }
+                .flatMap { stringBaseJsonV2 ->
+                    val orderInfo = stringBaseJsonV2.data
+                    val alipay = PayTask(mRootView.getCurrentActivity())
+                    Observable.just(alipay.payV2(orderInfo, true))
+                }
+                .flatMap { stringStringMap ->
+                     if (TSPayClient.CHANNEL_ALIPAY_SUCCESS == stringStringMap["resultStatus"]) {
+                        mBillRepository.aliPayIntegrationVerify(stringStringMap["memo"],
+                                stringStringMap["result"], stringStringMap["resultStatus"])
+                    } else Observable.error<BaseJsonV2<String>>(IllegalArgumentException(stringStringMap["memo"]))
+                }
+                .flatMap { mUserInfoRepository.currentLoginUserInfo }
+                .subscribe(object : BaseSubscribeForV2<UserInfoBean>() {
+                    override fun onSuccess(data: UserInfoBean) {
+                        try {
+                            mRootView.rechargeSuccess(amount)
+                        } catch (e: Exception) {
+                            e.printStackTrace()
+                        }
+
+                    }
+
+                    override fun onFailure(message: String, code: Int) {
+                        super.onFailure(message, code)
+                        try {
+                            mRootView.showSnackErrorMessage(message)
+                        } catch (ignored: Exception) {
+                            ignored.printStackTrace()
+                        }
+
+                    }
+
+                    override fun onException(throwable: Throwable) {
+                        super.onException(throwable)
+                        try {
+                            mRootView.showSnackErrorMessage(throwable.message)
+                        } catch (ignored: Exception) {
+                            ignored.printStackTrace()
+                        }
+
+                    }
+
+                })
+    }

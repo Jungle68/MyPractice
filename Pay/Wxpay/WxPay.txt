@@ -1,0 +1,46 @@
+override fun getWXPayStr(channel: String, amount: Double) {
+        if (mRootView.money != mRootView.money.toInt().toDouble() && mRootView.useInputMonye()) {
+            mRootView.initmRechargeInstructionsPop()
+            return
+        }
+        mBillRepository.getIntegrationWXPayStr(channel, amount)
+                .doOnSubscribe {
+                    mRootView.configSureBtn(false)
+                    mRootView.showSnackLoadingMessage(mContext.getString(R.string.recharge_credentials_ing))
+                }
+                .doAfterTerminate { mRootView.configSureBtn(true) }
+                .subscribe(object : BaseSubscribeForV2<BaseJsonV2<WXPayInfo>>() {
+                    override fun onSuccess(data: BaseJsonV2<WXPayInfo>) {
+                        val wxPayInfo = data.data
+                        val api = WXAPIFactory.createWXAPI(mContext, UmengConfig.WEIXIN_APPID, false)
+                        api.registerApp(UmengConfig.WEIXIN_APPID)
+                        val request = PayReq()
+                        request.appId = UmengConfig.WEIXIN_APPID
+                        request.partnerId = wxPayInfo.partnerid
+                        request.prepayId = wxPayInfo.prepayid
+                        request.packageValue = wxPayInfo.packagestr
+                        request.nonceStr = wxPayInfo.noncestr
+                        request.timeStamp = wxPayInfo.timestamp
+                        request.sign = wxPayInfo.sign
+                        api.sendReq(request)
+                    }
+
+                    override fun onFailure(message: String, code: Int) {
+                        super.onFailure(message, code)
+                        try {
+                            mRootView.showSnackErrorMessage(message)
+                        } catch (ignored: Exception) {
+                            ignored.printStackTrace()
+                        }
+                    }
+
+                    override fun onException(throwable: Throwable) {
+                        super.onException(throwable)
+                        try {
+                            mRootView.showSnackErrorMessage(mContext.resources.getString(R.string.err_net_not_work))
+                        } catch (ignored: Exception) {
+                            ignored.printStackTrace()
+                        }
+                    }
+                })
+    }
