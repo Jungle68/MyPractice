@@ -11,7 +11,7 @@ import com.thc.www.myinfo.utils.DisplayUtil
 
 abstract class MyBaseActivity : AppCompatActivity() {
     private lateinit var mToast: Toast
-    protected var animationAdded = false
+    private var animationAdded = false
     protected var screenW: Int = 0
     protected var screenH: Int = 0
     protected lateinit var wowo: WoWoViewPager
