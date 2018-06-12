@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.thc.www.practice.R
 import com.thc.www.practice.support.behavior.BehaviorActivity
-import com.thc.www.practice.support.behavior.ScrollBehaviorActivity
-import com.thc.www.practice.support.behavior.TranslateBehaviorActivity
 import com.thc.www.practice.support.bottom_sheet_dialog.BottomSheetActivity
 import com.thc.www.practice.support.recyclerview.RecyclerViewActivity
 import com.thc.www.practice.support.sliding_pane_layout.SlidingPaneLayoutActivity

@@ -30,4 +30,10 @@
         style="@style/BtnStyle"
         android:text="Sample(3)"
         app:layout_constraintTop_toBottomOf="@id/btn_view_pager"/>
+
+    <Button
+        android:id="@+id/btn_third_part"
+        style="@style/BtnStyle"
+        android:text="Third Part"
+        app:layout_constraintTop_toBottomOf="@id/btn_sample"/>
 </android.support.constraint.ConstraintLayout>

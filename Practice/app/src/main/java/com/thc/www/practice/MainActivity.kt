@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import com.thc.www.practice.android_21.Android21Activity
 import com.thc.www.practice.sample.SampleActivity
 import com.thc.www.practice.support.SupportActivity
+import com.thc.www.practice.thridpart.ThirdPartActivity
 import com.thc.www.practice.viewpager.ViewPagerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -33,6 +34,9 @@ class MainActivity : AppCompatActivity() {
 
         btn_sample.setOnClickListener {
             startActivity(Intent(this@MainActivity, SampleActivity::class.java))
+        }
+        btn_third_part.setOnClickListener {
+            startActivity(Intent(this@MainActivity, ThirdPartActivity::class.java))
         }
     }
 }

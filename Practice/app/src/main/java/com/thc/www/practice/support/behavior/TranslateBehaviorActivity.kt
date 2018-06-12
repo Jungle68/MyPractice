@@ -1,6 +1,9 @@
 package com.thc.www.practice.support.behavior
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Message
+import android.os.PersistableBundle
 import android.support.v4.view.ViewCompat
 import android.support.v7.app.AppCompatActivity
 import com.thc.www.practice.R
@@ -11,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_support_behavior_translate.*
  * @Author thc
  * @Date  2018/5/14
  */
-class TranslateBehaviorActivity : AppCompatActivity() {
+open class TranslateBehaviorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_support_behavior_translate)
