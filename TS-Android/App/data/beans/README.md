@@ -1,7 +1,7 @@
 # beans
 > 该包下主要是一些数据的实体类
 
-- ### [circle 包](./circle
+- ### [circle 包](./circle)
 
 - ### [integration 包](./integration)
 

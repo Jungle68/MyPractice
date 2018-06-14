@@ -1,17 +1,17 @@
 # qa
 > 该包下主要是问答相关的实体类
 
-- ### beans.qa.CollectAnswerList
+- ### CollectAnswerList
 > 问答模块，问题答案的集合的实体类
 
-- ### beans.qa.QAListInfoBean
+- ### QAListInfoBean
 > 问答模块，问题的数据的实体类
 
-- ### beans.qa.QASearchHistoryBean
+- ### QASearchHistoryBean
 > 问答模块，问题搜索历史记录实体类
 
-- ### beans.qa.QATopicBean
+- ### QATopicBean
 > 问答模块，问题主题的数据类
 
-- ### beans.qa.QuestionConfig
+- ### QuestionConfig
 > 问答模块，问题配置数据类
