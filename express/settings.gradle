@@ -1,2 +1,0 @@
-include ':app', ':link-library', ':baidumap', ':common'
-
